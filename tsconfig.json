@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "baseUrl": "./src",
+    "incremental": true,
+    "lib": ["es2021", "dom"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "outDir": "./transpiled",
+    "skipLibCheck": true,
+    "target": "es2020",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "strict": true,
+    "importHelpers": true
+  },
+  "include": ["./src/**/*"]
+}
