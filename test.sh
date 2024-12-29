@@ -7,9 +7,9 @@ set -euo pipefail
 cd -- "$( dirname -- "${BASH_SOURCE[0]}" )"
 
 rm package.json
-ln -s ./package.json.ts5_4 ./package.json
+ln -s package.ts5_4.json package.json
 pnpm i >& /dev/null
-if ./run_bazel.sh ; then
+if pnpm tsc --outDir src ; then
     echo '✅ Passed with TypeScript <5.5'
 else
     echo '❌ Failed with TypeScript <5.5"'
@@ -17,11 +17,11 @@ else
 fi
 
 rm package.json
-ln -s ./package.json.ts5_5 ./package.json
+ln -s package.ts5_5.json package.json
 pnpm i >& /dev/null
-if ./run_bazel.sh ; then
+if (pnpm tsc --outDir src || true) | grep 'error TS7017' > /dev/null ; then
+    echo '✅ Failed with TypeScript >=5.5'
+else
     echo '❌ Passed with TypeScript >=5.5'
     exit 1
-else
-    echo '✅ Failed with TypeScript >=5.5'
 fi
