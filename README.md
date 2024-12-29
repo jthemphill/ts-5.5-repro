@@ -2,7 +2,7 @@
 
 This repo reproduces a problem when `--outDir src` is specified.
 
-You can run TypeScript via `pnpm tsc --outDir src`.
+You can run TypeScript via `pnpm tsc --outDir src`. `run_bazel.sh` will run `pnpm instal
 
 The script `./test.sh` will run TypeScript, showing you that typechecking passes with TypeScript<5.5 and fails with TypeScript>=5.5.
 

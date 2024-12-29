@@ -9,8 +9,8 @@ importers:
   .:
     devDependencies:
       typescript:
-        specifier: ^5.5
-        version: 5.7.2
+        specifier: 5.5.0-dev.20240427
+        version: 5.5.0-dev.20240427
 
   backend:
     devDependencies:
@@ -20,11 +20,18 @@ importers:
 
 packages:
 
+  typescript@5.5.0-dev.20240427:
+    resolution: {integrity: sha512-vm3WnPi2ZVIJib+bLBXzoakaw/1F4X+C+Uycboz2B6k4y0LS1JflVySjUfNthvjFRqtDbKFOzXdyCXkuGbytWg==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
   typescript@5.7.2:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
     hasBin: true
 
 snapshots:
+
+  typescript@5.5.0-dev.20240427: {}
 
   typescript@5.7.2: {}
