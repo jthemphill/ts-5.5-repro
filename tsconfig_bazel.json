@@ -4,9 +4,8 @@
     "composite": false,
     "declaration": true,
     "declarationMap": false,
-    "emitDeclarationOnly": false,
     "incremental": false,
-    "noEmit": false,
+    "noEmit": true,
     "preserveSymlinks": false,
     "sourceMap": true
   },
