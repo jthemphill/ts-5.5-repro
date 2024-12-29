@@ -8,7 +8,7 @@ cd -- "$( dirname -- "${BASH_SOURCE[0]}" )"
 
 rm package.json
 ln -s package.ts5_4.json package.json
-pnpm i >& /dev/null
+pnpm install >& /dev/null
 if pnpm tsc --outDir src ; then
     echo '✅ Passed with TypeScript <5.5'
 else
@@ -18,7 +18,7 @@ fi
 
 rm package.json
 ln -s package.ts5_5.json package.json
-pnpm i >& /dev/null
+pnpm install >& /dev/null
 if (pnpm tsc --outDir src || true) | grep 'error TS7017' > /dev/null ; then
     echo '✅ Failed with TypeScript >=5.5'
 else
